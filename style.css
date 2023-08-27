@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+* {
+  font-family: "Press Start 2P", cursive;
+  user-select: none;
+}
+
+.ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: #285CA1;
+  margin: 0;
+  padding: 0;
+}
+
+.tabel {
+width: 400px;
+height: 400px; 
+  background: #ee304f;
+  border-radius: 100%;
+  border: 1px solid #0D152B;
+  box-shadow: -2px 20px 0 -3px #4283C4, -20px 20px #0D152B;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.board {
+  width: 100%;
+  height: auto;
+  background: rgba(211, 226, 234, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(13, 21, 43, 0.8);
+  box-shadow: -10px 5px 0px -2px rgba(25, 40, 82, 0.8);
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+  padding: 12px;
+}
+
+.board > span {
+  height: 100px;
+  width: 100px;
+  background: rgba(220, 226, 231, 0.143);
+  color: #fff;
+  font-size: 4em;
+  padding: 6px;
+  text-align: center;
+  border: 2px solid rgba(13, 21, 43, 0.8);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: -1.2px 2px 0px 0px rgba(20, 29, 76, 0.8);
+}
+
+.board > span:hover {
+  background: #6aa8d2;
+  transform: scale(0.95);
+}
+
+.board > span:active {
+  box-shadow: -1.2px 7.4px 0px -2.5px #141D4C;
+}
+
+#reset {
+  padding: 6px;
+  border: 2px solid #55efc4;
+  border-radius: 5px;
+  margin-top: 14px;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, scale 0.2s ease;
+}
+
+#reset:hover {
+  transform: scale(1.06);
+}
+
+#reset:active {
+  transform: translateY(3px);
+}
+
+.win {
+  background: #55efc4 !important;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+/* Toggle Styles */
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  font-size: 24px;
+}
